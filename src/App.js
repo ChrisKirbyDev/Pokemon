@@ -5,7 +5,7 @@ import Pokecard from "./Pokecard";
 function App() {
   return (
     <div className="App">
-      <Pokecard />
+      <Pokecard id={4} name="charmander" type="fire" exp={62} />
     </div>
   );
 }
