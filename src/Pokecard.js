@@ -7,10 +7,10 @@ export default function Pokecard(props) {
   let imgSrc = `${POKE_API}${props.id}.png`;
   return (
     <div className="Pokecard">
-      <h1>{props.name}</h1>
+      <h1 className="Pokecard-title">{props.name}</h1>
       <img src={imgSrc} alt={props.name} />
-      <div>Type: {props.type}</div>
-      <div>EXP: {props.exp}</div>
+      <div className="Pokecard-data">Type: {props.type}</div>
+      <div className="Pokecard-data">EXP: {props.exp}</div>
     </div>
   );
 }
