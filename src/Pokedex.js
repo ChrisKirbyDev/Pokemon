@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Pokecard from "./Pokecard";
 import "./Pokedex.css";
 
-const Pokedex = () => {
+const Pokedex = (props) => {
   const [pokemon, setPokemon] = useState([
     { id: 4, name: "Charmander", type: "fire", base_experience: 62 },
     { id: 7, name: "Squirtle", type: "water", base_experience: 63 },
@@ -16,6 +16,7 @@ const Pokedex = () => {
   return (
     <div className="Pokedex">
       <h1>Pokedex!</h1>
+      <p>Total Experience: {props.exp}</p>
       <div className="Pokedex-cards">
         {pokemon.map((p) => (
           <Pokecard
